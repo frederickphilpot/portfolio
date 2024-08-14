@@ -10,6 +10,7 @@ body {
     background: rgb(26,26,26);
     background: linear-gradient(90deg, rgba(26,26,26,1) 19%, rgba(51,83,76,1) 43%, rgba(79,136,117,1) 58%, rgba(26,26,26,1) 79%);
     color: whitesmoke;
+    overflow-x: hidden;
 }
 
 .hidden {
@@ -97,6 +98,31 @@ header nav ul li a {
     max-width: 600px;
 }
 
+.moving-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: auto;
+    animation: move-right 5s linear infinite;
+}
+
+@keyframes move-right {
+    0% { left: 0; }
+    100% { left: calc(50% - 200px); } /* Adjust to stop near the scroll box */
+}
+
+/* Scroll Box Heading Styles */
+.scroll-box-heading {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 50%; /* Adjust to position above the scroll box */
+    left: 85%;
+    transform: translate(-50%, -50%);
+}
+
 /* Scroll Box Styles */
 .scroll-box {
     width: 400px;
@@ -106,9 +132,13 @@ header nav ul li a {
     border-radius: 10px;
     padding: 10px;
     background: rgba(0, 0, 0, 0.5);
-    margin: 50px 0; /* Remove horizontal centering */
+    margin: auto; /* Center horizontally */
     position: absolute; /* Position it absolutely */
-    left: 20px; /* Move it to the left */
+    top: 85%; /* Move it to the center vertically */
+    left: 85%; /* Move it to the center horizontally */
+    transform: translate(-50%, -50%); /* Offset the position to truly center */
+    
+
 }
 
 /* Center the scroll box */
@@ -119,7 +149,7 @@ header nav ul li a {
 }
 
 .scroll-box .project {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .scroll-box .project img {
@@ -130,8 +160,7 @@ header nav ul li a {
 /* Die Image Styles */
 .die-container {
     display: flex;
-    display: flex;
-    justify-content: center;
+     justify-content: center;
     align-items: center;
     position: absolute; 
     right: 20px; 
@@ -141,7 +170,8 @@ header nav ul li a {
 
 .die {
     width: 300px;
-    height: auto;
+    height: 300px;
+    border-radius: 50%;
     animation: spin-die 10s linear infinite; 
 }
 
