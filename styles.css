@@ -114,3 +114,4 @@ nav ul li a:hover {
     transform-style: preserve-3d;
     transition: transform 1s ease-in-out;
     animation: spin 20s linear infinite; /* Automatic spinning 
+}
