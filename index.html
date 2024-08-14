@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Fantasy Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Loading Screen -->
@@ -25,51 +26,38 @@
         </header>
 
         <section id="home">
-            <div class="avatar-container">
-                <img src="./images/marandfred.png" alt="Avatar" class="avatar">
-                <h1>Welcome to My Portfolio</h1>
-                <p>Hello! I'm Frederick Philpot, a passionate web designer and developer with a journey rooted in creativity and technology. My exploration into web design began with a fascination for how digital spaces can blend aesthetics with functionality. Over the years, I've cultivated a skill set that spans across design principles, user experience, and front-end development.</p> 
-                <h3>My Journey</h3>
-                <p>My adventure into web design started in 2022 when I first encountered the power of HTML and CSS. What began as a hobby quickly evolved into a dedicated pursuit. I was captivated by the ability to transform ideas into visually engaging and interactive digital experiences. This initial spark ignited a commitment to mastering the craft of web design.</p>
-            </div>
-        </section>
-
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="gallery">
-                <div class="project">
-                    <div class="project-tile">
-                        <img src="./images/aroundtheus.PNG" alt="Project 1">
-                        <div class="overlay">
-                            <div class="text"><a href="https://frederickphilpot.github.io/se_project_aroundtheus" target="_blank">Project 1</a></div>
-                        </div>
+            <div class="content-container">
+                <div class="avatar-container">
+                    <img src="./images/marandfred.png" alt="Avatar" class="avatar">
+                    <div class="profile-content">
+                        <h1>Welcome to My Fantasy Portfolio</h1>
+                        <p>Hello! I'm Frederick Philpot, a passionate web designer and developer with a journey rooted in creativity and technology. My exploration into web design began with a fascination for how digital spaces can blend aesthetics with functionality. Over the years, I've cultivated a skill set that spans across design principles, user experience, and front-end development.</p> 
+                        <h3>My Journey</h3>
+                        <p>My adventure into web design started in 2022 when I first encountered the power of HTML and CSS. What began as a hobby quickly evolved into a dedicated pursuit. I was captivated by the ability to transform ideas into visually engaging and interactive digital experiences. This initial spark ignited a commitment to mastering the craft of web design.</p>
                     </div>
-                    <p>Jacques-Yves Cousteau, AC was a French naval officer, oceanographer, filmmaker, and author. He co-invented the first successful open-circuit self-contained underwater breathing apparatus, called the Aqua-Lung, which assisted him in producing some of the first underwater documentaries.</p>
-                </div>
-                <div class="project">
-                    <div class="project-tile">
-                        <img src="./images/coffeehouse.PNG" alt="Project 2">
-                        <div class="overlay">
-                            <div class="text"><a href="https://frederickphilpot.github.io/coffeehouse/" target="_blank">Project 2</a></div>
-                        </div>
-                    </div>
-                    <p>Speciality Coffee is a website crafted to showcase and explore various techniques and methodologies used in HTML and CSS. The site serves as a practical example of how different coding strategies and design principles are applied to create a visually appealing and functional web experience. From responsive layouts to advanced styling techniques, Speciality Coffee highlights the diverse ways in which HTML and CSS can be utilized to enhance web design and user interaction.</p>
-                </div>
-                <div class="project">
-                    <div class="project-tile">
-                        <img src="./images/penguin.PNG" alt="Project 3">
-                        <div class="overlay">
-                            <div class="text"><a href="https://frederickphilpot.github.io/penguin/" target="_blank">Project 3</a></div>
-                        </div>
-                    </div>
-                    <p>The Little Penguin is a project that demonstrates the creative use of HTML and CSS to bring an animated character to life. This project focuses on using modern web design techniques to create an engaging and interactive penguin animation. By leveraging HTML for structural elements and CSS for styling and animation, The Little Penguin showcases how these technologies can be combined to create a charming, animated friend that enhances user experience through visually appealing and interactive design elements.</p>
                 </div>
             </div>
+            <div class="scroll-box">
+                <div class="project">
+                    <img src="./images/project1.png" alt="Project 1">
+                </div>
+                <div class="project">
+                    <img src="./images/project2.png" alt="Project 2">
+                </div>
+                <!-- Add more projects as needed -->
+            </div>
+            <div class="die-container">
+                <img src="./images/die.png" alt="Six-Sided Die" class="die">
+            </div>
         </section>
-
-        <footer>
-            <p>&copy; 2024 Frederick Philpot</p>
-        </footer>
     </div>
+
+    <script>
+        // JavaScript to hide the loading screen and show the main content
+        window.addEventListener('load', () => {
+            document.getElementById('loading-screen').style.display = 'none';
+            document.getElementById('main-content').classList.remove('hidden');
+        });
+    </script>
 </body>
 </html>
