@@ -6,6 +6,12 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
+/* Hide content initially */
+#main-content {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
 /* Loading screen styles */
 #loading-screen {
     position: fixed;
@@ -18,9 +24,10 @@ body, html {
     align-items: center;
     justify-content: center;
     z-index: 9999;
-    transition: opacity 1s ease-out;
+    animation: fadeOut 1s ease-out forwards;
 }
 
+/* Loader styles */
 .loader {
     border: 8px solid #f3f3f3;
     border-top: 8px solid #3498db;
@@ -36,12 +43,13 @@ body, html {
     100% { transform: rotate(360deg); }
 }
 
-/* Main content styles */
-#main-content {
-    opacity: 0;
-    transition: opacity 1s ease-in;
+/* Fade out animation for loading screen */
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
 }
 
-#main-content.hidden {
-    display: none;
+/* Content appears after the loading screen fades out */
+#loading-screen.fade-out ~ #main-content {
+    opacity: 1;
 }
